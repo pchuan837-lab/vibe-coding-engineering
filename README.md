@@ -1,6 +1,6 @@
 # 《Vibe Coding 工程化》手册
 
-一套写给**有基础的准开发者 + 接手项目的 AI** 的工程化实战手册，覆盖需求澄清、方案设计、Bug 修复、重构四条主线的完整方法论与可复用提示词。
+一套写给**有基础的准开发者**的工程化实战手册。核心是教你**指挥 AI** 完成需求——从**需求澄清、方案设计、Bug 修复、重构**四条主线入手，每条主线皆配备了成体系的方法论与可复用提示词。
 
 > 在线阅读：[**vibe-coding-engineering**](https://pchuan837-lab.github.io/vibe-coding-engineering/index.html)（GitHub Pages 托管，明暗自适 + 四档色温）
 
