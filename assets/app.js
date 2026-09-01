@@ -1,5 +1,5 @@
 /* ============================================================
-   方案 X · 视觉壳交互（纯手写 JS，不引库）
+   Vibe Coding 工程化 · 视觉壳交互（纯手写 JS，不引库）
    - 色温控制台（4 档，data-temp + localStorage 前缀 vc-x-）
    - 明暗切换（data-theme + localStorage）
    - 侧边栏 / 目录面板折叠（TRAE 式 + rail 展开）
