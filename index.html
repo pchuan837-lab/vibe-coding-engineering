@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-temp="cool"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首页 · 方案X — Vibe Coding 工程化</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=3">
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="topnav">
+  <a class="brand" href="index.html">
+    <span class="seal">程</span>
+    <span>Vibe Coding 工程化<small>VIBE ENGINEERING HANDBOOK</small></span>
+  </a>
+  <nav class="nav-links">
+    <a href="index.html" class="active">首页</a>
+    <a href="doc.html?doc=00-导读/README.md">导读</a>
+    <div class="nav-dd">
+      <button class="nav-dd-btn" aria-haspopup="true" aria-expanded="false">教程 <span class="nav-caret">▾</span></button>
+      <div class="nav-dd-menu">
+        <a href="doc.html?doc=30-B1通用需求轨道/B1①-需求澄清与分析.md">B1 · 通用需求轨道</a>
+        <a href="doc.html?doc=40-B2Bug修复轨道/B2①-复现与界定Bug.md">B2 · Bug 修复轨道</a>
+        <a href="doc.html?doc=50-B3重构轨道/B3①-建立行为基线.md">B3 · 重构轨道</a>
+      </div>
+    </div>
+    <div class="nav-dd">
+      <button class="nav-dd-btn" aria-haspopup="true" aria-expanded="false">共享单元 <span class="nav-caret">▾</span></button>
+      <div class="nav-dd-menu">
+        <a href="doc.html?doc=10-共享单元/S0-为什么需要流程.md">S0 · 为什么需要流程</a>
+        <a href="doc.html?doc=10-共享单元/S-A-现状探索.md">S-A · 现状探索</a>
+        <a href="doc.html?doc=10-共享单元/S-B-测试与回归.md">S-B · 测试与回归</a>
+        <a href="doc.html?doc=10-共享单元/S-C-文档同步与交付.md">S-C · 文档同步与交付</a>
+        <a href="doc.html?doc=10-共享单元/S-D-流程自动化与工具链.md">S-D · 流程自动化与工具链</a>
+        <a href="doc.html?doc=10-共享单元/S-对话-与AI高效多轮对话.md">S-E · 与 AI 高效多轮对话</a>
+      </div>
+    </div>
+    <a href="about.html">关于</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <input placeholder="搜索教程、命令、概念…">
+    </div>
+    <button class="icon-btn" title="GitHub" aria-label="GitHub">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"></path></svg>
+    </button>
+    <button class="icon-btn theme-toggle" title="切换明暗" aria-label="切换明暗">
+      <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path></svg>
+      <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== 卷首全幅水墨画（全宽，飞鸟/水纹/竹枝） ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div class="hero-text">
+    <span class="kicker"><span class="seal">墨</span>VIBE CODING 工程化 · 实战手册</span>
+    <h1>把需求交给 AI，<em>可靠地交付</em></h1>
+    <p class="lead">一套可复现的流程：把模糊需求拆成可验收的任务，按「新功能 / 修 Bug / 重构」三条轨道交给 AI，再用测试、红线与走读守住质量底线。<strong>不依赖运气，依赖流程。</strong></p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="doc.html?doc=00-导读/README.md">新手，请从导读开始
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <a class="btn btn-ghost" href="#tracks">查看三轨道</a>
+      <a class="btn btn-ghost" href="doc.html?doc=10-共享单元/S0-为什么需要流程.md">查看共享轨道</a>
+      <a class="btn btn-ghost" href="about.html#projects">查看配套项目</a>
+    </div>
+    <div class="meta">
+      <span>版本 <b>v1.0</b></span>
+      <span>章节 <b>12 章</b></span>
+      <span>语言 <b>中文</b></span>
+      <span>更新于 <b>2026-08</b></span>
+    </div>
+      </div><!-- /hero-text -->
+    </div><!-- /hero-grid -->
+  </div><!-- /hero-inner -->
+
+  <!-- 山水题字：竖排墨字直接写入画境，无纸底无边框，融入墨山 -->
+  <div class="inscription" aria-hidden="true">
+    <div class="in-poem">持流程之定<br>御不测之变</div>
+    <span class="in-seal in-sign">程</span>
+  </div>
+
+  <!-- 水墨远山淡雾（飞鸟群 + 竹枝 + 水纹） -->
+  <svg class="ink-scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="mist1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="var(--mist)" stop-opacity="0"></stop>
+        <stop offset="0.5" stop-color="var(--mist)" stop-opacity="0.8"></stop>
+        <stop offset="1" stop-color="var(--mist)" stop-opacity="0"></stop>
+      </linearGradient>
+      <linearGradient id="mist2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="var(--mist)" stop-opacity="0"></stop>
+        <stop offset="0.5" stop-color="var(--mist)" stop-opacity="0.7"></stop>
+        <stop offset="1" stop-color="var(--mist)" stop-opacity="0"></stop>
+      </linearGradient>
+      <linearGradient id="mist3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="var(--mist)" stop-opacity="0"></stop>
+        <stop offset="0.5" stop-color="var(--mist)" stop-opacity="0.6"></stop>
+        <stop offset="1" stop-color="var(--mist)" stop-opacity="0"></stop>
+      </linearGradient>
+    </defs>
+    <circle cx="1138" cy="124" r="60" fill="var(--moon)" opacity="0.10"></circle>
+    <circle cx="1138" cy="124" r="44" fill="var(--moon)" opacity="0.22"></circle>
+    <circle cx="1138" cy="124" r="32" fill="var(--moon)"></circle>
+    <!-- 墨日：白天模式同位置以墨色剪影作"日"，暗夜自动隐藏 -->
+    <g class="sun" aria-hidden="true">
+      <circle cx="1138" cy="124" r="58" fill="var(--seal)" opacity="0.08"></circle>
+      <circle cx="1138" cy="124" r="44" fill="var(--seal)" opacity="0.16"></circle>
+      <circle cx="1138" cy="124" r="30" fill="var(--seal)" opacity="0.7"></circle>
+    </g>
+    <!-- 飞鸟群 -->
+    <g stroke="var(--scene-ink)" fill="none" stroke-linecap="round">
+      <path d="M280,145 q10,-8 20,0 q10,-8 20,0" stroke-width="2" opacity="0.35"></path>
+      <path d="M340,178 q8,-7 16,0 q8,-7 16,0" stroke-width="1.6" opacity="0.25"></path>
+      <path d="M235,190 q7,-6 14,0 q7,-6 14,0" stroke-width="1.4" opacity="0.18"></path>
+      <path d="M420,120 q8,-6 16,0 q8,-6 16,0" stroke-width="1.2" opacity="0.15"></path>
+      <path d="M455,105 q6,-5 12,0 q6,-5 12,0" stroke-width="1" opacity="0.12"></path>
+      <path d="M180,220 q8,-6 16,0 q8,-6 16,0" stroke-width="1.4" opacity="0.12"></path>
+      <path d="M220,235 q6,-5 12,0 q6,-5 12,0" stroke-width="1" opacity="0.08"></path>
+      <path d="M900,162 q9,-7 18,0 q9,-7 18,0" stroke-width="2" opacity="0.34"></path>
+      <path d="M985,188 q8,-6 16,0 q8,-6 16,0" stroke-width="1.6" opacity="0.28"></path>
+      <path d="M1058,170 q7,-5 14,0 q7,-5 14,0" stroke-width="1.4" opacity="0.24"></path>
+    </g>
+    <!-- 竹枝 -->
+    <g stroke="var(--scene-ink)" fill="none" stroke-linecap="round" opacity="0.2">
+      <path d="M1320,480 L1310,380 Q1305,350 1315,330" stroke-width="2"></path>
+      <path d="M1230,470 L1226,404 Q1223,382 1231,366" stroke-width="2"></path>
+      <path d="M1226,404 Q1216,392 1214,372" stroke-width="1.5"></path>
+      <path d="M1231,366 Q1225,350 1228,338" stroke-width="1.2"></path>
+      <path d="M1231,366 Q1240,362 1245,368" stroke-width="1.5"></path>
+      <path d="M1310,380 Q1298,365 1295,340" stroke-width="1.5"></path>
+      <path d="M1315,330 Q1308,310 1312,290" stroke-width="1.2"></path>
+      <path d="M1315,330 Q1325,325 1330,330" stroke-width="1.5"></path>
+      <path d="M1315,330 Q1305,325 1300,332" stroke-width="1.5"></path>
+      <path d="M1295,340 Q1285,335 1280,342" stroke-width="1.2"></path>
+      <path d="M1310,380 Q1320,375 1325,382" stroke-width="1.2"></path>
+    </g>
+    <!-- 远山淡雾（三层） -->
+    <path d="M0,480 L0,250 C100,215 170,140 260,170 C350,200 400,100 500,125 C600,150 660,60 760,95 C860,130 910,175 1010,150 C1110,125 1170,195 1270,175 C1370,155 1410,215 1440,205 L1440,480 Z" fill="var(--scene-ink)" opacity="0.08"></path>
+    <!-- 点景 · 一行远鸥（填补右上空白，淡墨“人”字两撇） -->
+    <g stroke="var(--scene-ink)" fill="none" stroke-linecap="round" opacity="0.34">
+      <path d="M1035,150 q5,-5 11,-2 M1035,150 q-5,-5 -11,-2" stroke-width="1.7"></path>
+      <path d="M1160,120 q4,-4 9,-2 M1160,120 q-4,-4 -9,-2" stroke-width="1.5"></path>
+      <path d="M1270,165 q4,-4 9,-2 M1270,165 q-4,-4 -9,-2" stroke-width="1.5"></path>
+      <path d="M1340,140 q3,-3 7,-1 M1340,140 q-3,-3 -7,-1" stroke-width="1.3"></path>
+    </g>
+    <!-- 点景 · 一缕天际淡洲（远水接天处，极淡岛影） -->
+    <path d="M1170,252 q42,-22 132,-13 q74,25 148,6 l0,-3 q-108,28 -280,7 z" fill="var(--scene-ink)" opacity="0.07"></path>
+    <rect x="0" y="258" width="1440" height="70" fill="url(#mist1)"></rect>
+    <path d="M0,480 L0,330 C140,295 220,235 340,265 C460,295 530,205 650,235 C770,265 840,300 960,275 C1080,250 1150,315 1270,295 C1390,275 1420,330 1440,325 L1440,480 Z" fill="var(--scene-ink)" opacity="0.15"></path>
+    <rect x="0" y="338" width="1440" height="60" fill="url(#mist2)"></rect>
+    <!-- 远景孤帆：极淡一叶隐于雾际，衬出“孤帆远影” -->
+    <g class="dot-sail" stroke="var(--scene-ink)" fill="none" stroke-linecap="round">
+      <path d="M1172,327 q9,-2 18,0 M1172,327 l-2,-1 M1190,326 l2,-1" stroke-width="1.1" opacity="0.26"></path>
+    </g>
+    <path d="M0,480 L0,390 C160,360 270,310 390,340 C510,370 620,290 740,320 C860,350 960,375 1080,350 C1200,325 1300,380 1440,365 L1440,480 Z" fill="var(--scene-ink)" opacity="0.24"></path>
+    <!-- 点景 · 寒江独钓：乌篷船 + 蓑笠翁垂钓（红框位·下右水面中心偏左，翁面朝右，实墨作景料） -->
+    <g class="dot-fisher" fill="none" stroke-linecap="round">
+      <!-- 船身 -->
+      <path fill="var(--scene-ink)" stroke="var(--scene-ink)" stroke-width="1.8" opacity="0.9" d="M924,450 L952,442 L1016,446 L1034,454 L1018,462 L946,458 Z"></path>
+      <!-- 乌篷 -->
+      <path fill="var(--scene-ink)" stroke="var(--scene-ink)" stroke-width="1.6" opacity="0.88" d="M942,443 Q994,436 1010,450 L1008,460 L942,458 Z"></path>
+      <!-- 斗笠：上尖 + 下沿弧 -->
+      <path fill="var(--scene-ink)" opacity="0.92" d="M986,414 L1002,404 L1018,414 Q1011,421 1002,419 Q993,421 986,414 Z"></path>
+      <!-- 低头垂钓：头顶淡弧线 -->
+      <path stroke="var(--scene-ink)" stroke-width="1.4" opacity="0.85" d="M1002,419 Q1010,429 1003,438"></path>
+      <!-- 蓑衣：喇叭下摆斗篷 -->
+      <path fill="var(--scene-ink)" opacity="0.9" d="M992,422 Q990,436 984,448 L998,456 L1005,442 L1013,458 L1028,456 L1020,444 L1016,428 Q1014,420 996,424 Q989,426 992,422 Z"></path>
+      <!-- 蓑编结构线 -->
+      <path stroke="var(--scene-ink)" stroke-width="1.4" opacity="0.85" d="M994,430 Q990,442 990,452 M1006,428 Q1004,442 1010,452"></path>
+      <!-- 钓竿 + 钓线（朝右前伸） -->
+      <path stroke="var(--scene-ink)" stroke-width="1.8" opacity="0.95" d="M1014,430 L1036,404"></path>
+      <path stroke="var(--scene-ink)" stroke-width="1.4" opacity="0.9" d="M1036,404 L1038,464"></path>
+    </g>
+    <rect x="0" y="398" width="1440" height="50" fill="url(#mist3)"></rect>
+    <path d="M0,480 L0,422 C240,404 430,372 615,398 C780,422 930,392 1110,414 C1270,433 1365,412 1440,428 L1440,480 Z" fill="var(--scene-ink)" opacity="0.4"></path>
+    <!-- 点景 · 孤帆远影：近景扁舟已去，仅留远景孤帆 + 远鸥 + 淡洲 -->
+    <!-- 水纹 -->
+    <g stroke="var(--water)" fill="none" stroke-width="0.8" opacity="0.15">
+      <path d="M0,475 Q100,468 200,475 Q300,482 400,475 Q500,468 600,475 Q700,482 800,475 Q900,468 1000,475 Q1100,482 1200,475 Q1300,468 1400,475 L1440,472"></path>
+      <path d="M0,470 Q120,463 240,470 Q360,477 480,470 Q600,463 720,470 Q840,477 960,470 Q1080,463 1200,470 Q1320,477 1440,470"></path>
+      <path d="M0,465 Q80,458 160,465 Q240,472 320,465 Q400,458 480,465 Q560,472 640,465 Q720,458 800,465 Q880,472 960,465 Q1040,458 1120,465 Q1200,472 1280,465 Q1360,458 1440,465"></path>
+    </g>
+  </svg>
+
+</section>
+
+<!-- ===== 主内容（居中，无侧边栏） ===== -->
+<main class="main">
+
+  <!-- 三轨道 -->
+  <div class="section-head" id="tracks"><span class="seal">一</span><svg class="brush-mark" viewBox="0 0 40 14"><path d="M2,7 C12,3 24,11 38,6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"></path></svg><h2>三条交付轨道</h2><span class="stitch"></span></div>
+  <section class="tracks">
+    <article class="track">
+      <svg class="brush-top" viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M0,7 C60,3 130,10 200,6 C240,4 275,8 300,5" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.30"></path></svg>
+      <div class="head"><span class="seal">B1</span><span class="tag">TRACK B1 · 新功能</span></div>
+      <h3>新功能</h3>
+      <p>从需求到可验收的新功能。先列验收清单，再让 AI 实现，用测试守住行为边界，避免「看起来能跑」的假完成。</p>
+      <div class="steps"><b>流程：</b>拆解需求 → 交办 → 迭代 → 验收</div>
+      <a class="go" href="doc.html?doc=30-B1通用需求轨道/B1①-需求澄清与分析.md">进入轨道
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </article>
+    <article class="track">
+      <svg class="brush-top" viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M0,7 C60,3 130,10 200,6 C240,4 275,8 300,5" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.5"></path></svg>
+      <div class="head"><span class="seal">B2</span><span class="tag">TRACK B2 · 修 Bug</span></div>
+      <h3>修 Bug</h3>
+      <p>复现 → 定位根因 → 最小修复 → 回归验证。让 AI 带着证据修 Bug，而不是瞎猜；先有红线测试，再谈修复。</p>
+      <div class="steps"><b>流程：</b>复现 → 根因 → 修复 → 回归</div>
+      <a class="go" href="doc.html?doc=40-B2Bug修复轨道/B2①-复现与界定Bug.md">进入轨道
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </article>
+    <article class="track">
+      <svg class="brush-top" viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M0,7 C60,3 130,10 200,6 C240,4 275,8 300,5" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.75"></path></svg>
+      <div class="head"><span class="seal">B3</span><span class="tag">TRACK B3 · 重构</span></div>
+      <h3>重构</h3>
+      <p>先建行为基线，再小步重构。每次改动都跑保真验证链：行为不变、结构变好，让 AI 在安全网里动手术。</p>
+      <div class="steps"><b>流程：</b>基线 → 坏味道 → 小步重构 → 保真</div>
+      <a class="go" href="doc.html?doc=50-B3重构轨道/B3①-建立行为基线.md">进入轨道
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </article>
+  </section>
+
+  <!-- 阅读路径 -->
+  <div class="section-head"><span class="seal">二</span><svg class="brush-mark" viewBox="0 0 40 14"><path d="M2,7 C12,3 24,11 38,6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"></path></svg><h2>一条主线，六步走</h2><span class="stitch"></span></div>
+  <section class="path">
+    <div class="path-steps">
+      <div class="path-step"><span class="seal">一</span><h4>理解需求</h4><p>澄清目标与边界，识别真实意图</p></div>
+      <div class="path-step"><span class="seal">二</span><h4>拆解任务</h4><p>拆成可独立验收的小任务</p></div>
+      <div class="path-step"><span class="seal">三</span><h4>选择轨道</h4><p>按类型进入 B1 / B2 / B3</p></div>
+      <div class="path-step"><span class="seal">四</span><h4>交办 AI</h4><p>带上验收清单与上下文交办</p></div>
+      <div class="path-step"><span class="seal">五</span><h4>验收回归</h4><p>逐条核对，跑测试与走读</p></div>
+      <div class="path-step"><span class="seal">六</span><h4>沉淀</h4><p>把经验写回手册与模板</p></div>
+    </div>
+  </section>
+
+  <!-- 共享单元 S 区一览 -->
+  <div class="section-head" id="shared"><span class="seal">共</span><svg class="brush-mark" viewBox="0 0 40 14"><path d="M2,7 C12,3 24,11 38,6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"></path></svg><h2>共享单元 S 区 · 三轨道通用前置</h2><span class="stitch"></span></div>
+  <p class="lead-note" style="margin:-4px 0 0;color:var(--muted);font-size:14px;line-height:1.7">六块地基，三轨道共用。只学一遍，按需引用；起步先看 S0，其余用到再回。</p>
+  <section class="hub-cards">
+    <a class="hub-card" href="doc.html?doc=10-共享单元/S0-为什么需要流程.md">
+      <div class="head"><span class="seal">S0</span></div>
+      <h3>为什么需要流程</h3>
+      <p>何时走流程、何时直接手梭，先建立共识再动手，20–40 分钟入门。</p>
+    </a>
+    <a class="hub-card" href="doc.html?doc=10-共享单元/S-对话-与AI高效多轮对话.md">
+      <div class="head"><span class="seal">对</span></div>
+      <h3>高效多轮对话</h3>
+      <p>把模糊需求转成 AI 可执行的提问姿势，减少来回返工。</p>
+    </a>
+    <a class="hub-card" href="doc.html?doc=10-共享单元/S-A-现状探索.md">
+      <div class="head"><span class="seal">察</span></div>
+      <h3>现状探索</h3>
+      <p>上手先读代码、跑接口、摸清边界，不带着信息盲区开工。</p>
+    </a>
+    <a class="hub-card" href="doc.html?doc=10-共享单元/S-B-测试与回归.md">
+      <div class="head"><span class="seal">试</span></div>
+      <h3>测试与回归</h3>
+      <p>不测不算完成：先列验收清单，再用测试与红线守住行为边界。</p>
+    </a>
+    <a class="hub-card" href="doc.html?doc=10-共享单元/S-C-文档同步与交付.md">
+      <div class="head"><span class="seal">稿</span></div>
+      <h3>文档同步与交付</h3>
+      <p>关键文件清单随手更、交付即同步，避免「实现了却说不清」。</p>
+    </a>
+    <a class="hub-card" href="doc.html?doc=10-共享单元/S-D-流程自动化与工具链.md">
+      <div class="head"><span class="seal">链</span></div>
+      <h3>流程自动化与工具链</h3>
+      <p>把重复交办沉淀为提示词模板与脚本，人人都能一键复用。</p>
+    </a>
+  </section>
+
+  <!-- 推荐阅读路径 -->
+  <div class="section-head" id="start"><span class="seal">导</span><svg class="brush-mark" viewBox="0 0 40 14"><path d="M2,7 C12,3 24,11 38,6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"></path></svg><h2>推荐阅读路径 · 新人从这里起步</h2><span class="stitch"></span></div>
+  <section class="guide-grid">
+    <a class="guide-card gc-a" href="doc.html?doc=10-共享单元/S0-为什么需要流程.md">
+      <svg class="brush-top" viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M0,7 C60,3 130,10 200,6 C240,4 275,8 300,5" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.30"></path></svg>
+      <div class="gc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 8.5l5 1-1 5-5-1z"></path><path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21"></path></svg></div>
+      <div class="gc-title">先：看懂为什么要流程</div>
+      <div class="gc-desc">不先建立共识，流程只是负担。20–40 分钟搞清楚：什么时候走流程、什么时候直接手写梭。</div>
+      <span class="gc-cta">共享单元 · S0
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </span>
+    </a>
+    <a class="guide-card gc-b" href="doc.html?doc=10-共享单元/S-对话-与AI高效多轮对话.md">
+      <svg class="brush-top" viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M0,7 C60,3 130,10 200,6 C240,4 275,8 300,5" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.40"></path></svg>
+      <div class="gc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2v3.5L10 18h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"></path></svg></div>
+      <div class="gc-title">再：学会让 AI 听懂</div>
+      <div class="gc-desc">AI 翻车九成出在提问。≈10 分钟，把「模糊抱怨」转成 AI 可执行的澄清问题。</div>
+      <span class="gc-cta">共享单元 · S-对话
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </span>
+    </a>
+    <div class="guide-card gc-c">
+      <svg class="brush-top" viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M0,7 C60,3 130,10 200,6 C240,4 275,8 300,5" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.5"></path></svg>
+      <div class="gc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4-4m4 4 4-4"></path><path d="M5 20h14"></path></svg></div>
+      <div class="gc-title">然后：按你手头的活选轨道</div>
+      <div class="gc-desc">共享单元只学一遍，用到时再按需回溯，不必提前背下来。</div>
+      <ul class="gc-list">
+        <li><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.4"></rect><rect x="13" y="3" width="8" height="8" rx="1.4"></rect><rect x="3" y="13" width="8" height="8" rx="1.4"></rect><rect x="13" y="13" width="8" height="8" rx="1.4"></rect></svg></span><b>新功能 → B1</b>（最完整，建议先学）</li>
+        <li><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2.5"></circle><path d="M9 6.5 7 4.5M15 6.5l2-2"></path><ellipse cx="12" cy="14.5" rx="4.8" ry="6.3"></ellipse><path d="M7.2 12.5H4M20 12.5h-3.2"></path><path d="M8.8 17.5 6.3 20M15.2 17.5l2.5 2.5"></path></svg></span><b>修 Bug → B2</b>（日常高频）</li>
+        <li><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></span><b>重构 → B3</b>（质量进阶）</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 起步直达表 -->
+  <div class="section-head" id="quick"><span class="seal">速</span><svg class="brush-mark" viewBox="0 0 40 14"><path d="M2,7 C12,3 24,11 38,6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"></path></svg><h2>一条轨道，一个起点</h2><span class="stitch"></span></div>
+  <p class="lead-note" style="margin:-4px 0 0;color:var(--muted);font-size:14px;line-height:1.7">先看「你手头现在是…」那一列，直接进对应轨道的第一个动作即可，不用从头翻。</p>
+  <div class="track-table-wrap">
+    <table class="track-table">
+      <thead>
+        <tr>
+          <th style="width:24%">你手头现在是…</th>
+          <th style="width:22%">轨道</th>
+          <th>从这儿起步</th>
+          <th style="width:16%">首章预计耗时</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="emo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.4"></rect><rect x="13" y="3" width="8" height="8" rx="1.4"></rect><rect x="3" y="13" width="8" height="8" rx="1.4"></rect><rect x="13" y="13" width="8" height="8" rx="1.4"></rect></svg></span> 做一个新功能 / 新项目</td>
+          <td><span class="route">B1 · 通用需求轨道</span></td>
+          <td><a class="start-link" href="doc.html?doc=30-B1通用需求轨道/B1①-需求澄清与分析.md">B1① 需求澄清与分析 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></td>
+          <td><span class="eta">20–40 min</span></td>
+        </tr>
+        <tr>
+          <td><span class="emo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2.5"></circle><path d="M9 6.5 7 4.5M15 6.5l2-2"></path><ellipse cx="12" cy="14.5" rx="4.8" ry="6.3"></ellipse><path d="M7.2 12.5H4M20 12.5h-3.2"></path><path d="M8.8 17.5 6.3 20M15.2 17.5l2.5 2.5"></path></svg></span> 修一个 Bug（日常高频）</td>
+          <td><span class="route">B2 · Bug 修复轨道</span></td>
+          <td><a class="start-link" href="doc.html?doc=40-B2Bug修复轨道/B2①-复现与界定Bug.md">B2① 复现与界定 Bug <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></td>
+          <td><span class="eta">10–20 min</span></td>
+        </tr>
+        <tr>
+          <td><span class="emo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></span> 重构 / 优化老代码</td>
+          <td><span class="route">B3 · 重构轨道</span></td>
+          <td><a class="start-link" href="doc.html?doc=50-B3重构轨道/B3①-建立行为基线.md">B3① 建立行为基线 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></td>
+          <td><span class="eta">15–30 min</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div>© 2026 Vibe Coding 工程化 · 以流程对抗不确定性</div>
+    <div class="pager">
+      <a href="doc.html?doc=10-共享单元/S0-为什么需要流程.md">← 共享单元</a>
+      <a href="doc.html?doc=30-B1通用需求轨道/B1①-需求澄清与分析.md">进正文 →</a>
+    </div>
+  </footer>
+
+  </main>
+
+<div class="preview-badge"><span class="bdot"></span>Vibe Coding 工程化 · 首页</div>
+
+<!-- ===== 色温控制台（固定左下角） ===== -->
+<div class="temp-ctl">
+  <span class="ctl-label">色温</span>
+  <button data-t="cool" class="active">冷墨青</button>
+  <button data-t="warm">暖宣纸</button>
+  <button data-t="ink">素水墨</button>
+  <button data-t="plain">白底黑字</button>
+  <span class="ctl-hint">明暗切换在右上角 ☀/☾</span>
+</div>
+
+<script src="assets/app.js"></script>
+
+</body></html>

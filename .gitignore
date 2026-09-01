@@ -1,0 +1,9 @@
+# OS / 编辑器临时文件
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log
+
+# 编辑器
+.idea/
+.vscode/

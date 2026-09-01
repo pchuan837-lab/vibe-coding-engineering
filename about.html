@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-temp="cool"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于 — Vibe Coding 工程化</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="about-page">
+<header class="topnav">
+  <a class="brand" href="index.html">
+    <span class="seal">程</span>
+    <span>Vibe Coding 工程化<small>VIBE ENGINEERING HANDBOOK</small></span>
+  </a>
+  <nav class="nav-links">
+    <a href="index.html">首页</a>
+    <a href="doc.html?doc=00-导读/README.md">导读</a>
+    <div class="nav-dd">
+      <button class="nav-dd-btn active" aria-haspopup="true" aria-expanded="false">教程 <span class="nav-caret">▾</span></button>
+      <div class="nav-dd-menu">
+        <a href="doc.html?doc=30-B1通用需求轨道/B1①-需求澄清与分析.md">B1 · 通用需求轨道</a>
+        <a href="doc.html?doc=40-B2Bug修复轨道/B2①-复现与界定Bug.md">B2 · Bug 修复轨道</a>
+        <a href="doc.html?doc=50-B3重构轨道/B3①-建立行为基线.md">B3 · 重构轨道</a>
+      </div>
+    </div>
+    <div class="nav-dd">
+      <button class="nav-dd-btn" aria-haspopup="true" aria-expanded="false">共享单元 <span class="nav-caret">▾</span></button>
+      <div class="nav-dd-menu">
+        <a href="doc.html?doc=10-共享单元/S0-为什么需要流程.md">S0 · 为什么需要流程</a>
+        <a href="doc.html?doc=10-共享单元/S-A-现状探索.md">S-A · 现状探索</a>
+        <a href="doc.html?doc=10-共享单元/S-B-测试与回归.md">S-B · 测试与回归</a>
+        <a href="doc.html?doc=10-共享单元/S-C-文档同步与交付.md">S-C · 文档同步与交付</a>
+        <a href="doc.html?doc=10-共享单元/S-D-流程自动化与工具链.md">S-D · 流程自动化与工具链</a>
+        <a href="doc.html?doc=10-共享单元/S-对话-与AI高效多轮对话.md">S-E · 与 AI 高效多轮对话</a>
+      </div>
+    </div>
+    <a href="about.html" class="active">关于</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <input id="search-input" placeholder="搜索章节标题…">
+    </div>
+    <button class="icon-btn" title="GitHub" aria-label="GitHub">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"></path></svg>
+    </button>
+    <button class="icon-btn theme-toggle" title="切换明暗" aria-label="切换明暗">
+      <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path></svg>
+      <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+    </button>
+  </div>
+</header>
+
+<div class="layout">
+  <!-- ===== 主内容（关于页） ===== -->
+  <main class="content">
+    <div class="section-head"><span class="seal" id="crumb-seal">介</span><svg class="brush-mark" viewBox="0 0 40 14"><path d="M2,7 C12,3 24,11 38,6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"></path></svg><h2 id="crumb-title">关于</h2><span class="stitch"></span></div>
+
+    <section class="doc-demo">
+      <div class="doc-wrap is-static" id="doc-body">
+        <div class="about-inner">
+          <h1 class="about-main">关 于</h1>
+          <p class="about-sub">这本手册是什么 · 怎么反馈问题 · 当前版本</p>
+          <div class="about-sep"></div>
+
+          <div class="about-block">
+            <h2 class="about-h">这本手册</h2>
+            <p class="about-p">《Vibe Coding 工程化：从需求到可靠交付的通用流程》是一套面向<strong>开发者与准开发者</strong>的实操手册。它不教语法，而是带你在有限的时间里，稳定地产出<strong>可验收、可复用、可协作</strong>的中间产物。三条轨道——<strong>B1 通用需求</strong>（新功能）、<strong>B2 Bug 修复</strong>、<strong>B3 重构</strong>——共享同一套判断力内核，各有专属打法；共享单元负责贯穿全程的测试回归、文档交付与工具链。</p>
+          </div>
+
+          <div class="about-block" id="projects">
+            <h2 class="about-h">配套项目与源码</h2>
+            <ul class="about-list">
+              <li>教程正文 / 站点源码 —— <a href="https://github.com/pchuan837-lab/vibe-coding-engineering" target="_blank" rel="noopener">vibe-coding-engineering</a></li>
+              <li>配套示例项目（电商退款，三轨走读的落地代码）—— <a href="https://github.com/pchuan837-lab/vibe-coding-refund-shop" target="_blank" rel="noopener">vibe-coding-refund-shop</a></li>
+            </ul>
+          </div>
+
+          <div class="about-block">
+            <h2 class="about-h">勘误与 Bug 反馈</h2>
+            <p class="about-p">如果你发现正文错误、步骤走不通、命令失效，欢迎来纠错。反馈时请尽量带上：</p>
+            <ul class="about-list">
+              <li>所在章节（如 <code>B1-①</code>、<code>S-B</code>）与页面地址；</li>
+              <li>你做了什么、期望什么、实际出现了什么；</li>
+              <li>环境信息（操作系统 / 语言模型 / 终端报错原文，如有）。</li>
+            </ul>
+            <p class="about-p">提交入口 —— <a href="https://github.com/pchuan837-lab/vibe-coding-engineering/issues" target="_blank" rel="noopener">在 GitHub 上提交 issue</a>。重要勘误会进入下方的更新记录；紧急阻断类问题优先处理。</p>
+          </div>
+
+          <div class="about-block">
+            <h2 class="about-h">版本信息<span class="about-like"> · 当前版本 v0.1</span></h2>
+            <ul class="about-list about-log">
+              <li><b>v0.3</b> · 2026-09-01 — 指南可读性打磨：正文可读上限与留白、右侧目录可折叠标题树、emoji 过滤、顶栏"教程 / 共享单元"二级下拉导航、关于页上线。</li>
+              <li><b>v0.2</b> · 2026-09-01 — 接入真实教程正文：自写本地 Markdown 渲染、三轨与共享单元全部章节可按 <code>doc.html?doc={路径}</code> 即时渲染，侧边栏 / 目录 / 翻页 / 面包屑同步。</li>
+              <li><b>v0.1</b> · 2026-08-31 — 视觉壳定稿：三轨页面 + 首页 + 示例正文占位，含明暗自适应与四档色温。</li>
+            </ul>
+          </div>
+
+          <div class="about-foot">
+            <p>© 2026 Vibe Coding 工程化·站。站点源码与教程正文以 CC-BY-4.0 开源授出，详情见仓库 LICENSE。<br>本站为纯静态页面，无追踪、无构建依赖，可直接部署到任意静态托管。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 2026 Vibe Coding 工程化 · 以流程对抗不确定性</div>
+    </footer>
+  </main>
+</div>
+
+<!-- ===== 色温控制台 ===== -->
+<div class="temp-ctl">
+  <span class="ctl-label">色温</span>
+  <button data-t="cool" class="active">冷墨青</button>
+  <button data-t="warm">暖宣纸</button>
+  <button data-t="ink">素水墨</button>
+  <button data-t="plain">白底黑字</button>
+  <span class="ctl-hint">明暗切换在右上角 ☀/☾</span>
+</div>
+
+<script src="assets/js/render-md.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+/* ===== 统一正文加载器 ===== */
+(function () {
+  'use strict';
+
+  function $(s, c) { return (c || document).querySelector(s); }
+  function qa(s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // 从 CATALOG 展平的条目里取 "数字徽标"
+  function numOf(t) {
+    var m = String(t).match(/^([0-9A-Za-z\u4e00-\u9fa5\u00B7①-]+)/);
+    var code = m ? m[1].replace(/\u00B7+$/, '') : t.slice(0, 1);
+    if (code.length > 4) code = code.slice(0, 2);
+    return code;
+  }
+
+  // 生成左侧章节树
+  function buildSidebar(activeFile) {
+    var nav = $('#side-nav');
+    if (!nav) return;
+    var html = '';
+    window.CATALOG.forEach(function (g) {
+      var open = g.items.some(function (it) { return it.f === activeFile; });
+      html += '<div class="side-group' + (open ? ' is-open' : '') + '">';
+      html += '<div class="side-label">' + esc(g.title) + '</div>';
+      g.items.forEach(function (it) {
+        var on = it.f === activeFile;
+        html += '<a class="side-link' + (on ? ' active' : '') + '" href="doc.html?doc=' +
+          encodeURIComponent(it.f) + '" title="' + esc(window.fullTitle(it)) + '">' +
+          '<span class="num">' + esc(it.n || numOf(it.t)) + '</span>' + esc(it.t) + '</a>';
+      });
+      html += '</div>';
+    });
+    nav.innerHTML = html;
+  }
+
+  // TOC：可折叠大纲（H2 一级，H3/H4 为子级），每个父标题一个折叠箭头，当前标题高亮
+  function tocLev(tag) { return tag === 'H4' ? 2 : tag === 'H3' ? 1 : 0; }
+
+  // 过滤标题里的图形 emoji / 变体选择符 / 零宽连接符（仅目录展示用，不动正文）
+  function stripEmoji(s) {
+    return String(s)
+      .replace(/[\u{1F000}-\u{1FAFF}\u{1F900}-\u{1F9FF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{200D}]/gu, '')
+      .replace(/\s+/g, ' ').trim();
+  }
+
+  function buildToc() {
+    var box = $('#toc-links');
+    if (!box) return;
+    var heads = qa('#doc-body h2, #doc-body h3, #doc-body h4');
+    if (!heads.length) { box.innerHTML = '<span class="toc-empty">（本章无小节）</span>'; return; }
+    var entries = heads.map(function (h) {
+      if (!h.id) h.id = 'sec-' + Math.random().toString(36).slice(2, 8);
+      return { id: h.id, text: stripEmoji(h.textContent), level: tocLev(h.tagName) };
+    });
+    // 组装树：子条目挂在最近的上一层条目下
+    var nodes = entries.map(function (d) { return { data: d, children: [] }; });
+    var stack = [];
+    nodes.forEach(function (n) {
+      while (stack.length && stack[stack.length - 1].data.level >= n.data.level) stack.pop();
+      if (stack.length) stack[stack.length - 1].children.push(n);
+      stack.push(n);
+    });
+    function render(n) {
+      var has = n.children && n.children.length;
+      var car = has ? '<button class="toc-car" data-role="car">▸</button>' : '<span class="toc-car ghost"></span>';
+      var sub = has ? '<div class="toc-sub">' + n.children.map(render).join('') + '</div>' : '';
+      return '<div class="toc-node">' + car +
+        '<a class="toc-link toc-lv' + n.data.level + '" href="#' + n.data.id + '">' + esc(n.data.text) + '</a>' +
+        sub + '</div>';
+    }
+    var html = '<div class="toc-tree">' +
+      nodes.filter(function (n) { return n.data.level === 0; }).map(render).join('') +
+      '</div>';
+    box.innerHTML = html;
+    tocCars();
+    tocBind();
+    tocScroll();
+  }
+
+  function tocCars() {
+    qa('.toc-tree .toc-car:not(.ghost)').forEach(function (c) {
+      c.classList.toggle('on', !c.closest('.toc-node').classList.contains('collapsed'));
+    });
+  }
+
+  function tocBind() {
+    var tree = $('.toc-tree');
+    if (!tree) return;
+    tree.addEventListener('click', function (e) {
+      var car = e.target.closest('.toc-car');
+      if (!car || car.classList.contains('ghost')) return;
+      e.preventDefault();
+      var nd = car.closest('.toc-node');
+      nd.classList.toggle('collapsed');
+      tocCars(); tocScroll();
+    });
+  }
+
+  // 滚动高亮当前最近标题（只统计可见 / 未折叠的链接，绑定一次）
+  function tocScroll() {
+    if (!window.__tocScroll) {
+      window.__tocScroll = function () {
+        var links = [];
+        qa('.toc-tree .toc-link').forEach(function (a) {
+          var nd = a.closest('.toc-node');
+          var p = nd.parentElement;
+          while (p && !p.classList.contains('toc-tree')) {
+            if (p.classList.contains('toc-node') && p.classList.contains('collapsed')) return;
+            p = p.parentElement;
+          }
+          var el = document.getElementById(a.getAttribute('href').slice(1));
+          if (el) links.push({ a: a, el: el });
+        });
+        if (!links.length) return;
+        var mark = links[0];
+        links.forEach(function (x) { if (x.el.getBoundingClientRect().top <= 90) mark = x; });
+        links.forEach(function (x) { x.a.classList.toggle('active', x.a === mark.a); });
+      };
+      window.addEventListener('scroll', window.__tocScroll, { passive: true });
+    }
+    window.__tocScroll();
+  }
+
+  // 处理正文里相对路径的 .md 链接 → 转成 doc.html?doc=
+  function rebaseLinks(basePath) {
+    var dir = String(basePath).split('/');
+    dir.pop(); // 去掉文件名，保留目录
+    qa('#doc-body a').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href) return;
+      if (/^[a-z]+:/i.test(href) || href.charAt(0) === '#' || href.charAt(0) === '/') return;
+      // 相对 .md → 规整为相对 content/ 的路径
+      var parts = href.split(/[\\/]/);
+      var stack = dir.slice();
+      parts.forEach(function (seg) {
+        if (seg === '.' || seg === '') return;
+        if (seg === '..') stack.pop();
+        else stack.push(seg);
+      });
+      var rel = stack.join('/');
+      a.setAttribute('href', 'doc.html?doc=' + encodeURIComponent(rel));
+    });
+  }
+
+  function setPager(cur, list) {
+    var i = 0;
+    for (var k = 0; k < list.length; k++) {
+      if (list[k].f === cur) { i = k; break; }
+    }
+    var box = $('#pager');
+    if (!box || !list.length) return;
+    function fullOf(it) { return window.fullTitle ? window.fullTitle(it) : it.t; }
+    var prev = i > 0 ? '<a href="doc.html?doc=' + encodeURIComponent(list[i - 1].f) + '">← ' + esc(fullOf(list[i - 1])) + '</a>' : '<span>← 第一章</span>';
+    var next = i < list.length - 1 ? '<a href="doc.html?doc=' + encodeURIComponent(list[i + 1].f) + '">' + esc(fullOf(list[i + 1])) + ' →</a>' : '<span>最后一章 →</span>';
+    var home = '<a href="index.html">首页</a>';
+    box.innerHTML = home + prev + next;
+  }
+
+  // 全文线性顺序（导读→共享→工具→B1→B2→B3→大纲），用于上一章/下一章
+  function linear() {
+    var arr = [];
+    window.CATALOG.forEach(function (g) {
+      arr = arr.concat(g.items);
+    });
+    return arr;
+  }
+
+  function load() {
+    if (document.getElementById('doc-body').classList.contains('is-static')) return;
+    var qs = new URLSearchParams(location.search);
+    var file = qs.get('doc') || '00-导读/README.md';
+    buildSidebar(file);
+    var flat = window.FLAT || [];
+    var item = null;
+    for (var i = 0; i < flat.length; i++) if (flat[i].f === file) { item = flat[i]; break; }
+
+    var sealtxt = '程';
+    if (item) {
+      var sm = String(item.n || '').match(/^(B\d+)/);
+      sealtxt = sm ? sm[1] : (item.n || '');
+    }
+    $('#crumb-seal').textContent = sealtxt;
+    $('#crumb-title').textContent = item ? item.t : '未找到章节';
+    document.title = (item ? window.fullTitle(item) + ' · ' : '') + 'Vibe Coding 工程化';
+
+    fetch('content/' + file)
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+      .then(function (md) {
+        $('#doc-body').innerHTML = window.renderMarkdown(md);
+        rebaseLinks(file);
+        buildToc();
+        setPager(file, linear());
+        if (item) setActiveNav(item.group);
+      })
+      .catch(function () {
+        $('#doc-body').innerHTML =
+          '<div class="doc-missing"><h2>未能载入该章节</h2><p>文件不存在或路径有误：<code>' +
+          esc(file) + '</code></p><p><a href="index.html">返回首页</a></p></div>';
+      });
+  }
+
+  function setActiveNav(groupTitle) {
+    var links = qa('.nav-links > a, .nav-links > .nav-dd');
+    links.forEach(function (a) { a.classList.remove('active'); });
+    var map = { '00 · 导读': 1, '10 · 共享单元': 3, '20 · 工具库': 3, '大纲': 2, '30 · B1 通用需求轨道': 2, '40 · B2 Bug 修复轨道': 2, '50 · B3 重构轨道': 2 };
+    var idx = map[groupTitle];
+    if (idx != null && links[idx]) links[idx].classList.add('active');
+  }
+
+  // 回车跳转到搜索命中的第一条
+  function bindSearch(list) {
+    var inp = $('#search-input');
+    if (!inp) return;
+    inp.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter') return;
+      var q = inp.value.trim().toLowerCase();
+      if (!q) return;
+      var hit = null;
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].t.toLowerCase().indexOf(q) >= 0 || list[i].f.toLowerCase().indexOf(q) >= 0) { hit = list[i]; break; }
+      }
+      if (hit) location.href = 'doc.html?doc=' + encodeURIComponent(hit.f);
+    });
+  }
+
+  load();
+  bindSearch(linear());
+})();
+</script>
+<div class="preview-badge"><span class="bdot"></span>Vibe Coding 工程化 · 关于</div>
+</body>
+</html>

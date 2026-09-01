@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-temp="cool"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 · 迷路了 — Vibe Coding 工程化</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="topnav">
+  <a class="brand" href="index.html">
+    <span class="seal">程</span>
+    <span>Vibe Coding 工程化<small>VIBE ENGINEERING HANDBOOK</small></span>
+  </a>
+  <nav class="nav-links">
+    <a href="index.html">首页</a>
+    <a href="doc.html?doc=00-导读/README.md">导读</a>
+    <a href="doc.html?doc=30-B1通用需求轨道/B1①-需求澄清与分析.md">教程</a>
+    <a href="doc.html?doc=10-共享单元/S0-为什么需要流程.md">共享单元</a>
+    <a href="about.html">关于</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <input placeholder="搜索教程、命令、概念…">
+    </div>
+    <button class="icon-btn theme-toggle" title="切换明暗" aria-label="切换明暗">
+      <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path></svg>
+      <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== 404 / 空状态 ===== -->
+<section class="err-wrap">
+  <div class="err-inner">
+    <div class="big-seal seal">迷</div>
+    <h1>这条路径走丢了</h1>
+    <div class="code">404 — PAGE NOT FOUND</div>
+    <p>你找的页面不在主线之上。要么是链接过期，要么是需求还没澄清清楚——<strong>先别急着修，回到起点。</strong></p>
+    <div class="err-cta">
+      <a class="btn btn-primary" href="index.html">回到首页
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M15 6l6 6-6 6"></path></svg>
+      </a>
+      <a class="btn btn-ghost" href="doc.html?doc=30-B1通用需求轨道/B1①-需求澄清与分析.md">进正文</a>
+    </div>
+  </div>
+</section>
+
+<div class="preview-badge"><span class="bdot"></span>Vibe Coding 工程化 · 404</div>
+
+<!-- ===== 色温控制台 ===== -->
+<div class="temp-ctl">
+  <span class="ctl-label">色温</span>
+  <button data-t="cool" class="active">冷墨青</button>
+  <button data-t="warm">暖宣纸</button>
+  <button data-t="ink">素水墨</button>
+  <button data-t="plain">白底黑字</button>
+  <span class="ctl-hint">明暗切换在右上角 ☀/☾</span>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
